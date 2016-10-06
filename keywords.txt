@@ -6,10 +6,36 @@
 # Datatypes (KEYWORD1)
 #######################################
 
+LEDState  KEYWORD1
+LEDInfo KEYWORD1
+LED KEYWORD1
+RelayState  KEYWORD1
+RelayInfo KEYWORD1
+Relay KEYWORD1
+
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
+init  KEYWORD2
+getState  KEYWORD2
+setState  KEYWORD2
+isOn  KEYWORD2
+isOff KEYWORD2
+on  KEYWORD2
+off KEYWORD2
+blink KEYWORD2
+isOpen  KEYWORD2
+isClosed  KEYWORD2
+getPin  KEYWORD2
+close KEYWORD2
+open  KEYWORD2
+
 #######################################
 # Constants (LITERAL1)
 #######################################
+
+LED_On  LITERAL1
+LED_Off LITERAL1
+RelayOpen LITERAL1
+RelayClosed LITERAL1
