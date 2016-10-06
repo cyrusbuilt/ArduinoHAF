@@ -1,0 +1,28 @@
+{
+  "name": "ArduinoHAF",
+  "repository": {
+    "url": "https://github.com/cyrusbuilt/ArduinoHAF.git",
+    "type": "git"
+  },
+  "platforms": [
+    "arduino"
+  ],
+  "authors": [
+    {
+      "url": "http://cyrusbuilt.net/",
+      "maintainer": true,
+      "email": "cyrusbuilt@gmail.com",
+      "name": "Cyrus Brunner"
+    }
+  ],
+  "keywords": [
+    "abstraction",
+    "hardware",
+    "device",
+    "control",
+    "framework",
+    "hal"
+  ],
+  "id": null,
+  "description": "A hardware abstraction framework for Arduino. Provides abstractions for devices attached to Arduino."
+}
