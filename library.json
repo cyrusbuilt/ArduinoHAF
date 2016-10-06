@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "https://github.com/cyrusbuilt/ArduinoHAF.git"
+    "url": "https://github.com/cyrusbuilt/ArduinoHAF.git"
   },
   "version": "1.0.0",
   "frameworks": "arduino",
