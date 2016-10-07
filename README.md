@@ -34,7 +34,10 @@ void setup() {
 }
 
 void loop() {
-
+  for (int i = 0; i < 4; i++) {
+    delay(333.33);
+    myLED.blink(333.33);
+  }
 }
 ```
 
