@@ -12,7 +12,7 @@
 ToggleSwitch::ToggleSwitch(short pin, void (*onStateChange)(SwitchInfo* sender), const char* name) {
   this->onStateChange = onStateChange;
   this->_lastState = SWITCH_STATE_OFF;
-  this->_sender = new SwitchInfo { pin, onStateChange, name };
+  this->_sender = new SwitchInfo { pin, SWITCH_STATE_OFF, name };
 }
 
 void ToggleSwitch::init() {

@@ -23,7 +23,7 @@ enum BuzzerNotes {
   BUZZER_NOTE_G = 392,
   BUZZER_NOTE_A = 440,
   BUZZER_NOTE_B = 494,
-  BUZZER_NOTE_C = 523
+  BUZZER_NOTE_C_HIGH = 523
 };
 
 /**
