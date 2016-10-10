@@ -18,6 +18,7 @@ BuzzerState KEYWORD1
 ToggleSwitch  KEYWORD1
 SwitchInfo  KEYWORD1
 SwitchState KEYWORD1
+DS1620Sensor  KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -39,6 +40,10 @@ open  KEYWORD2
 buzz  KEYWORD2
 playNote  KEYWORD2
 loop  KEYWORD2
+getClockPin KEYWORD2
+getDataPin  KEYWORD2
+getResetPin KEYWORD2
+getTemperature  KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

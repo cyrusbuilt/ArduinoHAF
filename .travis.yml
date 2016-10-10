@@ -15,6 +15,7 @@ script:
   - arduino --verify --board arduino:avr:uno $PWD/examples/RelayExample/RelayExample.ino
   - arduino --verify --board arduino:avr:uno $PWD/examples/BuzzerExample/BuzzerExample.ino
   - arduino --verify --board arduino:avr:uno $PWD/examples/ToggleSwitchExample/ToggleSwitchExample.ino
+  - arduino --verify --board arduino:avr:uno $PWD/examples/DS1620Example/DS1620Example.ino
 notifications:
   email:
     on_success: change
