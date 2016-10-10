@@ -81,6 +81,6 @@ double DS1620Sensor::getTemperature() {
   digitalWrite(this->_resetPin, HIGH);
   this->sendCommand(0xAA);
   int raw = this->readData();
-  digitalWrite(this->_resetPin);
+  digitalWrite(this->_resetPin, LOW);
   return ((double)raw / 2.0);
 }
