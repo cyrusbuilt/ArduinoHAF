@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "DS1620.h"
+#include "DS1620Sensor.h"
 
 #define PIN_CLOCK 4
 #define PIN_DATA  5

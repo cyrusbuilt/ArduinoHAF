@@ -8,8 +8,8 @@
  * temperature sensor.
  */
 
-#ifndef DS1620_h
-#define DS1620_h
+#ifndef DS1620Sensor_h
+#define DS1620Sensor_h
 
 #include <Arduino.h>
 

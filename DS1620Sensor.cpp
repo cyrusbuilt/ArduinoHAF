@@ -8,7 +8,7 @@
  * temperature sensor.
  */
 
-#include "DS1620.h"
+#include "DS1620Sensor.h"
 
 DS1620Sensor::DS1620Sensor(short clockPin, short dataPin, short resetPin) {
   this->_clockPin = clockPin;
