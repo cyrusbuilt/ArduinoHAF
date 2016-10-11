@@ -86,7 +86,7 @@ void DimmableLight::turnOff() {
 float DimmableLight::getLevelPercentage(int level) {
   int minVal = min(this->_sender->minLevel, this->_sender->maxLevel);
   int maxVal = max(this->_sender->minLevel, this->_sender->maxLevel);
-  int range = (max - min);
+  int range = (maxVal - minVal);
   float percentage = ((level * 100) / range);
   return percentage;
 }
