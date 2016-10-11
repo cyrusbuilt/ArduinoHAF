@@ -1,5 +1,5 @@
 /**
- * DS1620.cpp
+ * DS1620Sensor.cpp
  * Version 1.0a
  * Author:
  *  Cyrus Brunner

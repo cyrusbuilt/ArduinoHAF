@@ -19,6 +19,8 @@ ToggleSwitch  KEYWORD1
 SwitchInfo  KEYWORD1
 SwitchState KEYWORD1
 DS1620Sensor  KEYWORD1
+DimmableLight KEYWORD1
+DimmableLightInfo KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -44,6 +46,12 @@ getClockPin KEYWORD2
 getDataPin  KEYWORD2
 getResetPin KEYWORD2
 getTemperature  KEYWORD2
+getMinLevel KEYWORD2
+getMaxLevel KEYWORD2
+setLevel  KEYWORD2
+turnOn  KEYWORD2
+turnOff KEYWORD2
+getLevelPercentage  KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

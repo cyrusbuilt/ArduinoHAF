@@ -1,5 +1,5 @@
 /**
- * DS1620.h
+ * DS1620Sensor.h
  * Version 1.0a
  * Author:
  *  Cyrus Brunner
