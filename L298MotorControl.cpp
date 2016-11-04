@@ -42,12 +42,12 @@ void L298MotorControl::setState(L298MotorState state) {
     this->_sender->state = state;
     switch (state) {
       case L298MS_Forward:
-        digitalWrite(this->_controlPin1, LOW);
-        digitalWrite(this->_controlPin2, HIGH);
+        digitalWrite(this->_sender->controlPin1, LOW);
+        digitalWrite(this->_sender->controlPin2, HIGH);
         break;
       case L298MS_Reverse:
-        digitalWrite(this->_controlPin1, HIGH);
-        digitalWrite(this->_controlPin2, LOW);
+        digitalWrite(this->_sender->controlPin1, HIGH);
+        digitalWrite(this->_sender->controlPin2, LOW);
         break;
       case L298MS_Stopped:
         digitalWrite(this->_sender->controlPin1, HIGH);
@@ -69,7 +69,7 @@ void L298MotorControl::brake() {
 
 void L298MotorControl::forward(int speed, unsigned long duration) {
   speed = this->validateSpeed(speed);
-  analogWrite(this->_pwmPin, speed);
+  analogWrite(this->_sender->pwmPin, speed);
   this->setState(L298MS_Forward);
   if (duration > 0) {
     delay(duration);
