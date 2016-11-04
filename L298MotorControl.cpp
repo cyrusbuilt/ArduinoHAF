@@ -11,7 +11,7 @@
 #include "L298MotorControl.h"
 
 L298MotorControl::L298MotorControl(short pwmPin, short controlPin1, short controlPin2, void (*onStateChange)(L298MotorInfo* info)) {
-  this->_sender new L298MotorInfo { pwmPin, controlPin1, controlPin2, L298MS_Stopped };
+  this->_sender = new L298MotorInfo { pwmPin, controlPin1, controlPin2, L298MS_Stopped };
   this->onStateChange = onStateChange;
   pinMode(this->_sender->pwmPin, OUTPUT);
   pinMode(this->_sender->controlPin1, OUTPUT);
