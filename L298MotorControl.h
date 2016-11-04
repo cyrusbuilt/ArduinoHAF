@@ -13,8 +13,8 @@
 
 #include <Arduino.h>
 
-#define L298_MOTOR_CONTROL_MIN_SPEED 0;
-#define L298_MOTOR_CONTROL_MAX_SPEED 255;
+#define L298_MOTOR_CONTROL_MIN_SPEED 0
+#define L298_MOTOR_CONTROL_MAX_SPEED 255
 
 /**
  * Possible motor states.
