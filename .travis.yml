@@ -18,6 +18,7 @@ script:
   - arduino --verify --board arduino:avr:uno $PWD/examples/DimmableLightExample/DimmableLightExample.ino
   # Skipping the following test until I figure out why verify hangs (the framework compiles properly in Arduino and PlatformIO)
   # - arduino --verbose --verify --board arduino:avr:uno $PWD/examples/DS1620SensorExample/DS1620SensorExample.ino
+  - arduino --verify --board arduino:avr:uno $PWD/examples/L298MotorControlExample/L298MotorControlExample.ino
 notifications:
   email:
     on_success: change
