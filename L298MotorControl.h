@@ -175,7 +175,7 @@ private:
    */
   void setState(L298MotorState state);
 
-  L298MotorInfo _sender;
+  L298MotorInfo* _sender;
   void (*onStateChange)(L298MotorInfo* info);
 };
 #endif
