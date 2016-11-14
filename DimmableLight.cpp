@@ -94,3 +94,7 @@ float DimmableLight::getLevelPercentage(int level) {
 float DimmableLight::getLevelPercentage() {
   return this->getLevelPercentage(this->getLevel());
 }
+
+short DimmableLight::getPin() {
+  return this->_sender->pin;
+}

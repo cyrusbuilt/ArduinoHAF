@@ -25,6 +25,14 @@ BuzzerState Buzzer::getState() {
   return this->_sender->state;
 }
 
+short Buzzer::getPin() {
+  return this->_sender->pin;
+}
+
+const char* Buzzer::getName() {
+  return this->_sender->name;
+}
+
 void Buzzer::buzz(int freq, unsigned long duration) {
   if (this->_sender->state != BUZZER_STATE_BUZZING) {
     this->_sender->state = BUZZER_STATE_BUZZING;

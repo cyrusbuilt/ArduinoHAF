@@ -1,4 +1,4 @@
-#include "Arduino.h"
+#include <Arduino.h>
 #include "DimmableLight.h"
 
 #define PIN_LIGHT A3

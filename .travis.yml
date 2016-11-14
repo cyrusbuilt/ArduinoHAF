@@ -1,24 +1,28 @@
-sudo: required
-language: cpp
-before_install:
-  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16"
-  - sleep 3
-  - export DISPLAY=:1.0
-  - wget http://downloads.arduino.cc/arduino-1.6.5-linux64.tar.xz
-  - tar xf arduino-1.6.5-linux64.tar.xz
-  - sudo mv arduino-1.6.5 /usr/local/share/arduino
-  - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
+language: python
+python:
+  - "2.7"
+
+# Cache PlatformIO packages using Travis CI container-based infrastructure.
+sudo: false
+cache:
+  directories:
+    - "~/.platformio"
+
+env:
+  - PLATFORMIO_CI_SRC=examples/BuzzerExample
+  - PLATFORMIO_CI_SRC=examples/DimmableLightExample
+  - PLATFORMIO_CI_SRC=examples/DS6120SensorExample
+  - PLATFORMIO_CI_SRC=examples/L298MotorControlExample
+  - PLATFORMIO_CI_SRC=examples/LEDExample
+  - PLATFORMIO_CI_SRC=examples/RelayExample
+  - PLATFORMIO_CI_SRC=examples/ToggleSwitchExample
+
 install:
-  - ln -s $PWD /usr/local/share/arduino/libraries/ArduinoHAF
+  - pip install -U platformio
+
 script:
-  - arduino --verify --board arduino:avr:uno $PWD/examples/LEDExample/LEDExample.ino
-  - arduino --verify --board arduino:avr:uno $PWD/examples/RelayExample/RelayExample.ino
-  - arduino --verify --board arduino:avr:uno $PWD/examples/BuzzerExample/BuzzerExample.ino
-  - arduino --verify --board arduino:avr:uno $PWD/examples/ToggleSwitchExample/ToggleSwitchExample.ino
-  - arduino --verify --board arduino:avr:uno $PWD/examples/DimmableLightExample/DimmableLightExample.ino
-  # Skipping the following test until I figure out why verify hangs (the framework compiles properly in Arduino and PlatformIO)
-  # - arduino --verbose --verify --board arduino:avr:uno $PWD/examples/DS1620SensorExample/DS1620SensorExample.ino
-  - arduino --verify --board arduino:avr:uno $PWD/examples/L298MotorControlExample/L298MotorControlExample.ino
+  - platformio ci --lib="." --board=uno --board=megaatmega1280 --board=megaatmega2560 --board=micro --board=leonardo
+
 notifications:
   email:
     on_success: change

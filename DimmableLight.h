@@ -126,6 +126,12 @@ public:
    * @return The light level percentage.
    */
   float getLevelPercentage();
+
+  /**
+   * Gets the pin the light is attached to.
+   * @return The light pin.
+   */
+  short getPin();
 private:
   DimmableLightInfo* _sender;
   void (*onStateChange)(DimmableLightInfo* sender);

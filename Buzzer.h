@@ -100,6 +100,18 @@ public:
    */
   void playNote(BuzzerNotes note, unsigned long duration);
 
+  /**
+   * Gets the pin this buzzer is attached to.
+   * @return The buzzer pin.
+   */
+  short getPin();
+
+  /**
+   * Gets the name of this buzzer, if defined.
+   * @return The buzzer name.
+   */
+  const char* getName();
+
 private:
   BuzzerInfo* _sender;
   void (*onStateChange)(BuzzerInfo* sender);
