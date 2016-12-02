@@ -24,6 +24,10 @@ DimmableLightInfo KEYWORD1
 L298MotorState  KEYWORD1
 L298MotorInfo KEYWORD1
 L298MotorControl  KEYWORD1
+REX KEYWORD1
+RexInfo KEYWORD1
+ResetManager  KEYWORD1
+ResetManagerClass KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -58,6 +62,11 @@ getLevelPercentage  KEYWORD2
 forward KEYWORD2
 reverse KEYWORD2
 brake KEYWORD2
+isInitialized KEYWORD2
+isTripped KEYWORD2
+softReset KEYWORD2
+hardReset KEYWORD2
+attachHardResetPin  KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -81,3 +90,4 @@ SWITCH_STATE_ON LITERAL1
 SWITCH_STATE_OFF  LITERAL1
 L298_MOTOR_CONTROL_MIN_SPEED  LITERAL1
 L298_MOTOR_CONTROL_MAX_SPEED  LITERAL1
+REX_TRIP_THRESHOLD_MILLIS LITERAL1

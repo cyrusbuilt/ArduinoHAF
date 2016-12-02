@@ -14,5 +14,7 @@ platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --b
 platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/LEDExample/LEDExample.ino
 platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/RelayExample/RelayExample.ino
 platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/ToggleSwitchExample/ToggleSwitchExample.ino
+platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/REXExample/REXExample.ino
+platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/ResetManagerExample/ResetManagerExample.ino
 
 exit %ERRORLEVEL%

@@ -16,6 +16,8 @@ env:
   - PLATFORMIO_CI_SRC=examples/LEDExample
   - PLATFORMIO_CI_SRC=examples/RelayExample
   - PLATFORMIO_CI_SRC=examples/ToggleSwitchExample
+  - PLATFORMIO_CI_SRC=examples/REXExample
+  - PLATFORMIO_CI_SRC=examples/ResetManagerExample
 
 install:
   - pip install -U platformio
