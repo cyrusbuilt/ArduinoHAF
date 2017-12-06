@@ -16,6 +16,16 @@ DS1620Sensor::DS1620Sensor(short clockPin, short dataPin, short resetPin) {
   this->_resetPin = resetPin;
 }
 
+DS1620Sensor::~DS1620Sensor() {
+    // Reset all pins to default state then zero them.
+    pinMode(this->_clockPin, INPUT);
+    pinMode(this->_dataPin, INPUT);
+    pinMode(this->_resetPin, INPUT);
+    this->_clockPin = 0;
+    this->_dataPin = 0;
+    this->_resetPin = 0;
+}
+
 short DS1620Sensor::getClockPin() {
   return this->_clockPin;
 }

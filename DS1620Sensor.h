@@ -29,6 +29,11 @@ public:
   DS1620Sensor(short clockPin, short dataPin, short resetPin);
 
   /**
+   * Class destructor/finalizer.
+   */
+  ~DS1620Sensor();
+
+  /**
    * Initializes the sensor.
    */
   void init();

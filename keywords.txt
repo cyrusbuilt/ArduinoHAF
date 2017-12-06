@@ -28,6 +28,10 @@ REX KEYWORD1
 RexInfo KEYWORD1
 ResetManager  KEYWORD1
 ResetManagerClass KEYWORD1
+TemperatureConversion   KEYWORD1
+TemperatureScale    KEYWORD1
+TemperatureEventInfo    KEYWORD1
+TemperatureSensor   KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -67,6 +71,32 @@ isTripped KEYWORD2
 softReset KEYWORD2
 hardReset KEYWORD2
 attachHardResetPin  KEYWORD2
+convertRankineToKelvin  KEYWORD2
+convertRankineToCelcius KEYWORD2
+convertRankineToFarenheit   KEYWORD2
+convertKelvinToRankine  KEYWORD2
+convertKelvinToFarenHeit    KEYWORD2
+convertKelvinToCelcius  KEYWORD2
+convertCelciusToRankine KEYWORD2
+convertCelciusToKelvin  KEYWORD2
+convertCelciusToFarenheit   KEYWORD2
+convertFarenheitToRankine   KEYWORD2
+convertFarenheitToKelvin    KEYWORD2
+convertFarenheitToCelcius   KEYWORD2
+convertToRankine    KEYWORD2
+convertFromRankine  KEYWORD2
+convertToKelvin KEYWORD2
+convertFromKelvin   KEYWORD2
+convertToCelcius    KEYWORD2
+convertFromCelcius  KEYWORD2
+convertToFarenheit  KEYWORD2
+convertFromFarenheit    KEYWORD2
+convert KEYWORD2
+getSensor   KEYWORD2
+getRawTemperature   KEYWORD2
+getTemperature  KEYWORD2
+getScale    KEYWORD2
+setScale    KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -91,3 +121,11 @@ SWITCH_STATE_OFF  LITERAL1
 L298_MOTOR_CONTROL_MIN_SPEED  LITERAL1
 L298_MOTOR_CONTROL_MAX_SPEED  LITERAL1
 REX_TRIP_THRESHOLD_MILLIS LITERAL1
+ABSOLUTE_ZERO_CELCIUS   LITERAL1
+ABSOLUTE_ZERO_FARENHEIT LITERAL1
+ABSOLUTE_ZERO_KELVIN    LITERAL1
+ABSOLUTE_ZERO_RANKINE   LITERAL1
+TEMP_SCALE_CELCIUS  LITERAL1
+TEMP_SCALE_FARENHEIT    LITERAL1
+TEMP_SCALE_KELVIN   LITERAL1
+TEMP_SCALE_RANKINE  LITERAL1
