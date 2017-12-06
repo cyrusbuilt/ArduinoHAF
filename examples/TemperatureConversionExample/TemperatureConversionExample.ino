@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include "TemperatureConversion.h"
 
-void printTestResult(char* testName, double expected, double result) {
+void printTestResult(String testName, double expected, double result) {
     Serial.print(testName);
     Serial.print(F(": expected: "));
     Serial.print(expected);
@@ -104,7 +104,7 @@ void testConvertFromRankine() {
 }
 
 void testConvertToKelvin() {
-    double expected 280.37;
+    double expected = 280.37;
     double result = TemperatureConversion::convertToKelvin(TEMP_SCALE_FARENHEIT, 45);
     Serial.println(F("Converting from scale Farenheit, to Scale: Kelvin"));
     printTestResult("convertToKelvin", expected, result);

@@ -15,7 +15,7 @@ platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --b
 platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/ToggleSwitchExample/ToggleSwitchExample.ino
 platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/REXExample/REXExample.ino
 platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/ResetManagerExample/ResetManagerExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/TemperatureSensorExample/TemperatureConversionExample.ino
+platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/TemperatureConversionExample/TemperatureConversionExample.ino
 platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/TemperatureSensorExample/TemperatureSensorExample.ino
 
 exit $?
