@@ -32,6 +32,8 @@ TemperatureConversion   KEYWORD1
 TemperatureScale    KEYWORD1
 TemperatureEventInfo    KEYWORD1
 TemperatureSensor   KEYWORD1
+PIR KEYWORD1
+PirInfo KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

@@ -44,8 +44,7 @@ struct SwitchInfo {
 /**
  * Hardware abstraction of a toggle switch.
  */
-class ToggleSwitch
-{
+class ToggleSwitch {
 public:
   /**
    * Initializes a new instance of the toggle switch with the pin the switch is

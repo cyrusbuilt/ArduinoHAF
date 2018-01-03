@@ -65,8 +65,7 @@ struct L298MotorInfo {
 /**
  * A hardware abstraction of an L298-controlled motor.
  */
-class L298MotorControl
-{
+class L298MotorControl {
 public:
   /**
    * Initializes a new instance of an L298-controlled motor with the PWM (speed

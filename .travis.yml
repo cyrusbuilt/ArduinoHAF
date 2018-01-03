@@ -20,11 +20,14 @@ env:
   - PLATFORMIO_CI_SRC=examples/ResetManagerExample
   - PLATFORMIO_CI_SRC=examples/TemperatureConversionExample
   - PLATFORMIO_CI_SRC=examples/TemperatureSensorExample
+  - PLATFORMIO_CI_SRC=examples/PIRExample
 
 install:
+  # - pip install -U cpplint
   - pip install -U platformio
 
 script:
+  # - cpplint --repository=. --recursive --linelength=200 --filter=-build/include  ./
   - platformio ci --lib="." --board=uno --board=megaatmega1280 --board=megaatmega2560 --board=micro --board=leonardo
 
 notifications:

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Get script dir.
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
@@ -6,16 +6,31 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 # Build targets.
 export PATH=~/.atom/packages/platformio-ide/penv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:~/n/bin:$PATH
 
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/BuzzerExample/BuzzerExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/DimmableLightExample/DimmableLightExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/DS6120SensorExample/DS6120SensorExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/L298MotorControlExample/L298MotorControlExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/LEDExample/LEDExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/RelayExample/RelayExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/ToggleSwitchExample/ToggleSwitchExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/REXExample/REXExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/ResetManagerExample/ResetManagerExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/TemperatureConversionExample/TemperatureConversionExample.ino
-platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 examples/TemperatureSensorExample/TemperatureSensorExample.ino
+EXAMPLES=(
+    examples/BuzzerExample/BuzzerExample.ino
+    examples/DimmableLightExample/DimmableLightExample.ino
+    examples/DS6120SensorExample/DS6120SensorExample.ino
+    examples/L298MotorControlExample/L298MotorControlExample.ino
+    examples/LEDExample/LEDExample.ino
+    examples/RelayExample/RelayExample.ino
+    examples/ToggleSwitchExample/ToggleSwitchExample.ino
+    examples/REXExample/REXExample.ino
+    examples/ResetManagerExample/ResetManagerExample.ino
+    examples/TemperatureConversionExample/TemperatureConversionExample.ino
+    examples/TemperatureSensorExample/TemperatureSensorExample.ino
+    examples/PIRExample/PIRExample.ino
+)
+
+total=${#EXAMPLES[@]}
+current=0
+progress=0
+for i in "${EXAMPLES[@]}"
+do
+    let "current++"
+    let "progress = ($current * 100) / $total"
+    printf "Processing example sketch: %s" $i
+    printf " (%s%%)\n" $progress
+    platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 $i
+done
 
 exit $?

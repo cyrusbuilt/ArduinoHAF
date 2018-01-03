@@ -34,8 +34,7 @@
 /**
  * Provides methods for resetting an Arduino.
  */
-class ResetManagerClass
-{
+class ResetManagerClass {
 public:
   /**
    * Initializes a new instance of the Reset Manager.

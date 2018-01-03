@@ -46,8 +46,7 @@ struct DimmableLightInfo {
 /**
  * A hardware abstraction of a dimmable light.
  */
-class DimmableLight
-{
+class DimmableLight {
 public:
   /**
    * Initializes a new instance of the DimmableLight class with the pin the

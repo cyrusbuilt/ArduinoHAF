@@ -53,7 +53,7 @@ then extract its contents to a folder called "ArduinoHAF" and then move that
 folder to your libraries folder.
 
 ## FAQ
-Q: Why not just have a single include so you can include the whole framework?
+Q: Why not just have a single include so you can include the whole framework?  
 A: By having separate includes, you can keep code size down. Every include you
 add to your sketch increases the compiled size and memory usage.
 Microcontrollers have a fairly finite amount of program storage and memory

@@ -16,8 +16,7 @@
 /**
  * A hardware abstraction of a Dallas Semiconductor DS1620 temperature sensor.
  */
-class DS1620Sensor
-{
+class DS1620Sensor {
 public:
   /**
    * Initializes a new instance of the DS1620 sensor with the clock pin, data

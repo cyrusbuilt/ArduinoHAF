@@ -62,8 +62,7 @@ struct BuzzerInfo {
 /**
  * Hardware abstraction of a piezo buzzer.
  */
-class Buzzer
-{
+class Buzzer {
 public:
   /**
    * Initializes a new instance of the buzzer with the pin the buzzer is
