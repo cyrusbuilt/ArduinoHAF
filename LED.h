@@ -40,8 +40,7 @@ struct LEDInfo {
 /**
  * A hardware abstraction of an LED device.
  */
-class LED
-{
+class LED {
 public:
   /**
    * Initializes a new instance of an LED with the pin it is attached to and

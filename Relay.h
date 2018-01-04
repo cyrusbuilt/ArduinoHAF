@@ -44,8 +44,7 @@ struct RelayInfo {
 /**
  * Hardware abstraction of a relay switch.
  */
-class Relay
-{
+class Relay {
 public:
   /**
    * Initializes a new instance of the relay with the pin it is attached to,

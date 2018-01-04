@@ -37,8 +37,7 @@ struct RexInfo {
 /**
  * Hardware abstraction of a Request to EXit sensor (REX).
  */
-class REX
-{
+class REX {
 public:
   /**
    * Initializes a new instance of a REX with the pin the sensor is attached to,
@@ -70,7 +69,7 @@ public:
    * Initializes a new instance of a REX with the pin the sensor is attached to.
    * @param pin The pin the sensor is attached to.
    */
-  REX(short pin);
+  explicit REX(short pin);
 
   /**
    * Initializes the REX sensor.
