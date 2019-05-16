@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "DimmableLight.h"
 
-#define PIN_LIGHT A3
+#define PIN_LIGHT A0
 
 void onLightStateChange(DimmableLightInfo* sender) {
   Serial.println(F("Light changed state!"));
