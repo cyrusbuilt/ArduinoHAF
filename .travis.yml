@@ -35,7 +35,7 @@ before_script:
 
 script:
   # - cpplint --repository=. --recursive --linelength=200 --filter=-build/include  ./
-  - make build
+  - make all
 
 notifications:
   email:
