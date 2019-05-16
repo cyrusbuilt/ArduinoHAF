@@ -4,7 +4,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
 # Build targets.
-export PATH=~/.atom/packages/platformio-ide/penv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:~/n/bin:$PATH
+export PATH=~/.platformio/penv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:~/n/bin:$PATH
 
 EXAMPLES=(
     examples/BuzzerExample/BuzzerExample.ino
@@ -30,7 +30,7 @@ do
     let "progress = ($current * 100) / $total"
     printf "Processing example sketch: %s" $i
     printf " (%s%%)\n" $progress
-    platformio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 $i
+    pio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 --board=huzzah $i
 done
 
 exit $?

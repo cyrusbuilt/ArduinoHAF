@@ -28,7 +28,7 @@ install:
 
 script:
   # - cpplint --repository=. --recursive --linelength=200 --filter=-build/include  ./
-  - platformio ci --lib="." --board=uno --board=megaatmega1280 --board=megaatmega2560 --board=micro --board=leonardo
+  - platformio ci --lib="." --board=uno --board=megaatmega1280 --board=megaatmega2560 --board=micro --board=leonardo --board=huzzah
 
 notifications:
   email:
