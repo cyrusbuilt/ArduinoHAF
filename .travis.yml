@@ -25,10 +25,17 @@ env:
 install:
   # - pip install -U cpplint
   - pip install -U platformio
+  - pio update
+
+before_script:
+  - env
+  - echo $HOME
+  - echo $TRAVIS_BUILD_DIR
+  - ls -al $PWD
 
 script:
   # - cpplint --repository=. --recursive --linelength=200 --filter=-build/include  ./
-  - platformio ci --lib="." --board=uno --board=megaatmega1280 --board=megaatmega2560 --board=micro --board=leonardo
+  - make all
 
 notifications:
   email:

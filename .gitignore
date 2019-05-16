@@ -70,3 +70,6 @@ $RECYCLE.BIN/
 
 # Exclude unit tests for now
 test
+
+# VSCode stuff
+.vscode
