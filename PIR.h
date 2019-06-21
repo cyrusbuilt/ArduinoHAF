@@ -37,7 +37,7 @@ struct PirInfo {
     /**
      * The name of the PIR.
      */
-    char* name;
+    const char* name;
 };
 
 /**
@@ -53,7 +53,7 @@ public:
      * be NULL.
      * @param name The name of the PIR. Can be NULL.
      */
-    PIR(short pin, void (*onStateChange)(PirInfo* sender), char* name);
+    PIR(short pin, void (*onStateChange)(PirInfo* sender), const char* name);
 
     /**
      * Gets whether or not the PIR is initialized.
