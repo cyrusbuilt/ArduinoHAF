@@ -17,7 +17,7 @@
 
 #include "PIR.h"
 
-PIR::PIR(short pin, void (*onStateChange)(PirInfo* sender), char* name) {
+PIR::PIR(short pin, void (*onStateChange)(PirInfo* sender), const char* name) {
     this->_initialized = false;
     this->_sender = new PirInfo { pin, LOW, name };
     this->onStateChange = onStateChange;
