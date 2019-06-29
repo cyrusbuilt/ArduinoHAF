@@ -9,16 +9,17 @@ export PATH=~/.platformio/penv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:~/n/bi
 EXAMPLES=(
     examples/BuzzerExample/BuzzerExample.ino
     examples/DimmableLightExample/DimmableLightExample.ino
+    examples/DoorContactExample/DoorContactExample.ino
     examples/DS6120SensorExample/DS6120SensorExample.ino
     examples/L298MotorControlExample/L298MotorControlExample.ino
     examples/LEDExample/LEDExample.ino
+    examples/PIRExample/PIRExample.ino
     examples/RelayExample/RelayExample.ino
-    examples/ToggleSwitchExample/ToggleSwitchExample.ino
-    examples/REXExample/REXExample.ino
     examples/ResetManagerExample/ResetManagerExample.ino
+    examples/REXExample/REXExample.ino
     examples/TemperatureConversionExample/TemperatureConversionExample.ino
     examples/TemperatureSensorExample/TemperatureSensorExample.ino
-    examples/PIRExample/PIRExample.ino
+    examples/ToggleSwitchExample/ToggleSwitchExample.ino
 )
 
 total=${#EXAMPLES[@]}
