@@ -11,6 +11,7 @@ cache:
 env:
   - PLATFORMIO_CI_SRC=examples/BuzzerExample
   - PLATFORMIO_CI_SRC=examples/DimmableLightExample
+  - PLATFORMIO_CI_SRC=examples/DoorContactExample
   - PLATFORMIO_CI_SRC=examples/DS6120SensorExample
   - PLATFORMIO_CI_SRC=examples/L298MotorControlExample
   - PLATFORMIO_CI_SRC=examples/LEDExample
