@@ -22,5 +22,7 @@ pio ci %BUILD_ARGS% examples\TemperatureConversionExample/TemperatureConversionE
 pio ci %BUILD_ARGS% examples\TemperatureSensorExample/TemperatureSensorExample.ino
 pio ci %BUILD_ARGS% examples\PIRExample/PIRExample.ino
 pio ci %BUILD_ARGS% examples\DoorContactExample/DoorContactExample.ino
+pio ci %BUILD_ARGS% examples\UltraSoniceDistanceSensorExample/UltraSoniceDistanceSensorExample.ino
+pio ci %BUILD_ARGS% examples\UltraSoniceDistanceSensorEventExample/UltraSoniceDistanceSensorEventExample.ino
 
 exit %ERRORLEVEL%

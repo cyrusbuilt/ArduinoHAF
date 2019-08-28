@@ -7,6 +7,13 @@ BUILD         := pio ci --verbose
 LIB           := "."
 
 #--------------------------------------------------------------------- targets
+clean_docs:
+	-rm -rf docs
+
+docs:
+	@doxygen
+	@open docs/html/index.html
+
 # update .travis.yml if target boards added
 all: uno megaatmega1280 megaatmega2560 micro leonardo huzzah
 
