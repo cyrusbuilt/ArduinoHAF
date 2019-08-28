@@ -34,6 +34,7 @@ TemperatureEventInfo    KEYWORD1
 TemperatureSensor   KEYWORD1
 PIR KEYWORD1
 PirInfo KEYWORD1
+HCSR04  KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -99,6 +100,9 @@ getRawTemperature   KEYWORD2
 getTemperature  KEYWORD2
 getScale    KEYWORD2
 setScale    KEYWORD2
+measureDistanceCm   KEYWORD2
+measureDistanceIn   KEYWORD2
+setAlarmDistance    KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -131,3 +135,5 @@ TEMP_SCALE_CELCIUS  LITERAL1
 TEMP_SCALE_FARENHEIT    LITERAL1
 TEMP_SCALE_KELVIN   LITERAL1
 TEMP_SCALE_RANKINE  LITERAL1
+CM_TO_IN_MULTIPLIER LITERAL1
+MAX_DISTANCE_CM LITERAL1

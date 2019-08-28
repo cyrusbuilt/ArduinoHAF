@@ -73,3 +73,6 @@ test
 
 # VSCode stuff
 .vscode/
+
+# documentation files
+docs/

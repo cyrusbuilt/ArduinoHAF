@@ -6,6 +6,9 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 # Build targets.
 export PATH=~/.platformio/penv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:~/n/bin:$PATH
 
+echo
+echo "Building targets..."
+echo
 EXAMPLES=(
     examples/BuzzerExample/BuzzerExample.ino
     examples/DimmableLightExample/DimmableLightExample.ino
@@ -20,6 +23,8 @@ EXAMPLES=(
     examples/TemperatureConversionExample/TemperatureConversionExample.ino
     examples/TemperatureSensorExample/TemperatureSensorExample.ino
     examples/ToggleSwitchExample/ToggleSwitchExample.ino
+    examples/UltraSonicDistanceSensorExample/UltraSonicDistanceSensorExample.ino
+    examples/UltraSoniceDistanceSensorEventExample/UltraSoniceDistanceSensorEventExample.ino
 )
 
 total=${#EXAMPLES[@]}
@@ -33,5 +38,15 @@ do
     printf " (%s%%)\n" $progress
     pio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 --board=huzzah $i
 done
+
+echo
+echo "Cleaning documentation output..."
+echo
+rm -rf ${SCRIPT_DIR}/docs
+
+echo
+echo "Generating API documentation..."
+echo
+doxygen ${SCRIPT_DIR}/Doxyfile
 
 exit $?
