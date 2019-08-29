@@ -1,6 +1,6 @@
 /**
  * Buzzer.cpp
- * Version 1.0a
+ * Version 1.1
  * Author:
  *  Cyrus Brunner
  *
@@ -54,4 +54,20 @@ void Buzzer::buzz(int freq, unsigned long duration) {
 
 void Buzzer::playNote(BuzzerNotes note, unsigned long duration) {
   this->buzz((int)note, duration);
+}
+
+void Buzzer::on() {
+  digitalWrite(this->_sender->pin, HIGH);
+}
+
+void Buzzer::off() {
+  digitalWrite(this->_sender->pin, LOW);
+}
+
+bool Buzzer::isOn() {
+  return digitalRead(this->_sender->pin) == HIGH;
+}
+
+bool Buzzer::isOff() {
+  return !this->isOn();
 }

@@ -1,6 +1,6 @@
 /**
  * Buzzer.h
- * Version 1.0a
+ * Version 1.1
  * Author:
  *  Cyrus Brunner
  *
@@ -110,6 +110,28 @@ public:
    * @return The buzzer name.
    */
   const char* getName();
+
+  /**
+   * Just turns the buzzer on by driving the pin high.
+   */
+  void on();
+
+  /**
+   * Just turns the buzzer off by driving the pin low.
+   */
+  void off();
+
+  /**
+   * Checks to see if the buzzer is on.
+   * @return true if the buzzer is on; Otherwise, false.
+   */
+  bool isOn();
+
+  /**
+   * Checks to see if the buzzer is off.
+   * @return true if the buzzer is off; Otherwise false.
+   */
+  bool isOff();
 
 private:
   BuzzerInfo* _sender;
