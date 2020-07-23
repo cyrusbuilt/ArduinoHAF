@@ -24,6 +24,7 @@ env:
   - PLATFORMIO_CI_SRC=examples/PIRExample
   - PLATFORMIO_CI_SRC=examples/UltraSoniceDistanceSensorExample
   - PLATFORMIO_CI_SRC=examples/UltraSoniceDistanceSensorEventExample
+  - PLATFORMIO_CI_SRC=examples/WaterLevelSensorExample
 
 install:
   # - pip install -U cpplint
