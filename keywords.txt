@@ -35,6 +35,7 @@ TemperatureSensor   KEYWORD1
 PIR KEYWORD1
 PirInfo KEYWORD1
 HCSR04  KEYWORD1
+WaterLevelSensor    KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -103,6 +104,14 @@ setScale    KEYWORD2
 measureDistanceCm   KEYWORD2
 measureDistanceIn   KEYWORD2
 setAlarmDistance    KEYWORD2
+begin   KEYWORD2
+setMinValue KEYWORD2
+setMaxValue KEYWORD2
+setTapeLengthCm KEYWORD2
+getPercentFull  KEYWORD2
+getLevelCm  KEYWORD2
+getLevelInches  KEYWORD2
+read    KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -137,3 +146,4 @@ TEMP_SCALE_KELVIN   LITERAL1
 TEMP_SCALE_RANKINE  LITERAL1
 CM_TO_IN_MULTIPLIER LITERAL1
 MAX_DISTANCE_CM LITERAL1
+SENSOR_RESISTOR LITERAL1

@@ -24,5 +24,6 @@ pio ci %BUILD_ARGS% examples\PIRExample/PIRExample.ino
 pio ci %BUILD_ARGS% examples\DoorContactExample/DoorContactExample.ino
 pio ci %BUILD_ARGS% examples\UltraSoniceDistanceSensorExample/UltraSoniceDistanceSensorExample.ino
 pio ci %BUILD_ARGS% examples\UltraSoniceDistanceSensorEventExample/UltraSoniceDistanceSensorEventExample.ino
+pio ci %BUILD_ARGS% examples\WaterLevelSensorExample/WaterLevelSensorExample.ino
 
 exit %ERRORLEVEL%

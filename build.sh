@@ -25,6 +25,7 @@ EXAMPLES=(
     examples/ToggleSwitchExample/ToggleSwitchExample.ino
     examples/UltraSonicDistanceSensorExample/UltraSonicDistanceSensorExample.ino
     examples/UltraSoniceDistanceSensorEventExample/UltraSoniceDistanceSensorEventExample.ino
+    examples/WaterLevelSensorExample/WaterLevelSensorExample.ino
 )
 
 total=${#EXAMPLES[@]}
