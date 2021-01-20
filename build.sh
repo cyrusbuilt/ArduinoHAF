@@ -37,7 +37,7 @@ do
     let "progress = ($current * 100) / $total"
     printf "Processing example sketch: %s" $i
     printf " (%s%%)\n" $progress
-    pio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 --board=huzzah $i
+    pio ci --lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 --board=huzzah --board=featheresp32 $i
 done
 
 echo

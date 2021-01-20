@@ -1,7 +1,7 @@
 @echo off
 cls
 
-set BUILD_ARGS=--lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 --board=huzzah
+set BUILD_ARGS=--lib="." --verbose --board=uno --board=micro --board=leonardo --board=megaatmega1280 --board=megaatmega2560 --board=huzzah --board=featheresp32
 
 :: Get script directory
 set SCRIPT_DIR=%~dp0
