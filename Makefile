@@ -3,7 +3,7 @@ FIND          := find
 DIR           := $(PWD)/examples
 CRITERIA      := \( -name "*.ino" -o -name "*.pde" \)
 EACH_EXAMPLE  := $(FIND) $(DIR) $(CRITERIA) -exec
-BUILD         := pio ci --verbose
+BUILD         := pio ci
 LIB           := "."
 
 #--------------------------------------------------------------------- targets
