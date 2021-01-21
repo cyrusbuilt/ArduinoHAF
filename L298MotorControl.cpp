@@ -1,6 +1,6 @@
 /**
  * L298MotorControl.cpp
- * Version 1.0a
+ * Version 1.1
  * Author:
  *  Cyrus Brunner
  *
@@ -9,6 +9,9 @@
  */
 
 #include "L298MotorControl.h"
+#ifdef ESP32
+#include "ESP32_AnalogWrite.h"
+#endif
 
 L298MotorControl::L298MotorControl(short pwmPin, short controlPin1, short controlPin2, void (*onStateChange)(L298MotorInfo* info)) {
   this->_sender = new L298MotorInfo { pwmPin, controlPin1, controlPin2, L298MS_Stopped };

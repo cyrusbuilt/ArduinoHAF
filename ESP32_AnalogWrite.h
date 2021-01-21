@@ -5,6 +5,8 @@
  *  Cyrus Brunner
  *
  * This library provides compatibility functions for Arduino's analogWrite() on ESP32.
+ * The required code is this library is largely taken from ERROPiX's library here:
+ * https://github.com/ERROPiX/ESP32_AnalogWrite
  */
 
 #ifndef _ESP32_ANALOG_WRITE_H

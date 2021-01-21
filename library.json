@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/cyrusbuilt/ArduinoHAF.git"
   },
-  "version": "1.1.5",
+  "version": "1.1.6",
   "frameworks": [
     "arduino",
     "esp8266-nonos-sdk"

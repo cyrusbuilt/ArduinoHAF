@@ -1,6 +1,6 @@
 /**
  * Buzzer.cpp
- * Version 1.1
+ * Version 1.2
  * Author:
  *  Cyrus Brunner
  *
@@ -8,6 +8,10 @@
  */
 
 #include "Buzzer.h"
+#ifdef ESP32
+#include "ESP32_AnalogWrite.h"
+#include "ESP32_Tone.h"
+#endif
 
 Buzzer::Buzzer(short pin, void (*onStateChange)(BuzzerInfo* sender), const char* name) {
   this->onStateChange = onStateChange;
