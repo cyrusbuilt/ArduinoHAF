@@ -1,6 +1,6 @@
 /**
  * DimmableLight.h
- * Version 1.0a
+ * Version 1.1
  * Author:
  *  Cyrus Brunner
  *

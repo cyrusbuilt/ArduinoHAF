@@ -3,7 +3,7 @@ FIND          := find
 DIR           := $(PWD)/examples
 CRITERIA      := \( -name "*.ino" -o -name "*.pde" \)
 EACH_EXAMPLE  := $(FIND) $(DIR) $(CRITERIA) -exec
-BUILD         := pio ci --verbose
+BUILD         := pio ci
 LIB           := "."
 
 #--------------------------------------------------------------------- targets
@@ -17,7 +17,7 @@ docs:
 # update .travis.yml if target boards added
 all: uno megaatmega1280 megaatmega2560 micro leonardo huzzah featheresp32
 
-uno megaatmega1280 megaatmega2560 micro leonardo huzzah:
+uno megaatmega1280 megaatmega2560 micro leonardo huzzah featheresp32:
 	PLATFORMIO_BOARD=$@ $(MAKE) build
 
 build:

@@ -1,6 +1,6 @@
 /**
  * DimmableLight.cpp
- * Version 1.0a
+ * Version 1.1
  * Author:
  *  Cyrus Brunner
  *
@@ -8,6 +8,9 @@
  */
 
 #include "DimmableLight.h"
+#ifdef ESP32
+#include "ESP32_AnalogWrite.h"
+#endif
 
 DimmableLight::DimmableLight(short pin, int minLevel, int maxLevel, void (*onStateChange)(DimmableLightInfo* sender)) {
   this->onStateChange = onStateChange;
