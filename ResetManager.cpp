@@ -1,6 +1,6 @@
 /**
  * ResetManager.cpp
- * Version 1.1
+ * Version 1.2
  * Author:
  *  Cyrus Brunner
  *
@@ -45,8 +45,8 @@ void ResetManagerClass::attachHardResetPin(short pin) {
 void ResetManagerClass::softReset() {
   #if defined(__AVR__)
     asm volatile (" jmp 0");
-  #elif defined(ESP8266)
-    ESP.reset();
+  #elif defined(ESP8266) || defined(ESP32)
+    ESP.restart();
   #endif
 }
 
