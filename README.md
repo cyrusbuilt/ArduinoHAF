@@ -1,6 +1,6 @@
 # ArduinoHAF :: Hardware Abstraction Framework for Arduino
 
-[![Build Status](https://travis-ci.org/cyrusbuilt/ArduinoHAF.svg?branch=master)](https://travis-ci.org/cyrusbuilt/ArduinoHAF)
+![Build Status](https://github.com/cyrusbuilt/ArduinoHAF/actions/workflows/ci.yml/badge.svg)
 
 ==========================================================================
 
