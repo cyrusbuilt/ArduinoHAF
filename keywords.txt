@@ -6,6 +6,8 @@
 # Datatypes (KEYWORD1)
 #######################################
 
+BrightnessLevel	KEYWORD1
+LDR	KEYWORD1
 LEDState  KEYWORD1
 LEDInfo KEYWORD1
 LED KEYWORD1
@@ -112,6 +114,11 @@ getPercentFull  KEYWORD2
 getLevelCm  KEYWORD2
 getLevelInches  KEYWORD2
 read    KEYWORD2
+performReading	KEYWORD2
+readSensorRaw	KEYWORD2
+readSensorVolts	KEYWORD2
+readSensorBrightness	KEYWORD2
+getBrightnessLevel	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -147,3 +154,8 @@ TEMP_SCALE_RANKINE  LITERAL1
 CM_TO_IN_MULTIPLIER LITERAL1
 MAX_DISTANCE_CM LITERAL1
 SENSOR_RESISTOR LITERAL1
+DARK	LITERAL1
+DIM	LITERAL1
+LIGHT	LITERAL1
+BRIGHT	LITERAL1
+VERY_DARK	LITERAL1
