@@ -1,6 +1,6 @@
 /**
  * LED.cpp
- * Version 1.0a
+ * Version 1.1
  * Author:
  *  Cyrus Brunner
  *
@@ -10,19 +10,19 @@
 
 #include "LED.h"
 
-LED::LED(short pin, void (*onStateChange)(LEDInfo* info)) {
+HAF_LED::HAF_LED(short pin, void (*onStateChange)(LEDInfo* info)) {
   this->_sender = new LEDInfo { pin, LED_Off };
   this->onStateChange = onStateChange;
 }
 
-void LED::init() {
+void HAF_LED::init() {
   if (this->_sender->pin > 0) {
     pinMode(this->_sender->pin, OUTPUT);
     digitalWrite(this->_sender->pin, LOW);
   }
 }
 
-void LED::getStateInternal() {
+void HAF_LED::getStateInternal() {
   int state = digitalRead(this->_sender->pin);
   if (state == HIGH) {
     this->_sender->state = LED_On;
@@ -32,12 +32,12 @@ void LED::getStateInternal() {
   }
 }
 
-LEDState LED::getState() {
+LEDState HAF_LED::getState() {
   this->getStateInternal();
   return this->_sender->state;
 }
 
-void LED::setState(LEDState state) {
+void HAF_LED::setState(LEDState state) {
   if (this->_sender->state != state) {
     this->_sender->state = state;
     digitalWrite(this->_sender->pin, state);
@@ -47,23 +47,23 @@ void LED::setState(LEDState state) {
   }
 }
 
-bool LED::isOn() {
+bool HAF_LED::isOn() {
   return (this->getState() == LED_On);
 }
 
-bool LED::isOff() {
+bool HAF_LED::isOff() {
   return (this->getState() == LED_Off);
 }
 
-void LED::on() {
+void HAF_LED::on() {
   this->setState(LED_On);
 }
 
-void LED::off() {
+void HAF_LED::off() {
   this->setState(LED_Off);
 }
 
-void LED::blink(unsigned long delayms) {
+void HAF_LED::blink(unsigned long delayms) {
   this->on();
   delay(delayms);
   this->off();

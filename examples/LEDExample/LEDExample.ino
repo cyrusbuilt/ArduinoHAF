@@ -22,7 +22,7 @@ void onLEDStateChange(LEDInfo* sender) {
 }
 
 // Attach and LED to the pin and assign a handler for state changes.
-LED blinker(PIN_LED, onLEDStateChange);
+HAF_LED blinker(PIN_LED, onLEDStateChange);
 
 
 void setup() {
