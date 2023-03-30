@@ -1,6 +1,6 @@
 /**
  * LED.h
- * Version 1.0a
+ * Version 1.1
  * Author:
  *  Cyrus Brunner
  *
@@ -40,7 +40,7 @@ struct LEDInfo {
 /**
  * A hardware abstraction of an LED device.
  */
-class LED {
+class HAF_LED {
 public:
   /**
    * Initializes a new instance of an LED with the pin it is attached to and
@@ -48,7 +48,7 @@ public:
    * @param pin The pin this LED is attached to.
    * @param onStateChange The callback to fire when the LED changes state.
    */
-  LED(short pin, void (*onStateChange)(LEDInfo* sender));
+  HAF_LED(short pin, void (*onStateChange)(LEDInfo* sender));
 
   /**
    * Initializes the LED.

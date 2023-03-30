@@ -1,6 +1,6 @@
 # ArduinoHAF :: Hardware Abstraction Framework for Arduino
 
-![Build Status](https://github.com/cyrusbuilt/ArduinoHAF/actions/workflows/ci.yml/badge.svg)
+[![Build Status](https://github.com/cyrusbuilt/ArduinoHAF/actions/workflows/ci.yml/badge.svg)](https://github.com/cyrusbuilt/ArduinoHAF/actions?query=workflow%3APlatformIO)
 
 ==========================================================================
 
@@ -17,9 +17,6 @@ the appropriate methods to control it. Many of the abstractions in this
 Framework will optionally allow you to attach callbacks to act as event handlers
 for when the device changes state.
 
-At the moment, the Framework only includes abstractions for LEDs and Relays, but
-new devices will continue to be added.
-
 ## How to use
 
 Add the appropriate header for the device you want to use in your sketch. So, if
@@ -31,7 +28,7 @@ you wanted to use an LED, you could do it like so:
 
 #define PIN_LED 4
 
-LED myLED(PIN_LED, NULL);
+HAF_LED myLED(PIN_LED, NULL);
 
 void setup() {
   myLED.init();
@@ -51,7 +48,7 @@ If you are using PlatformIO [http://platformio.org/](http://platformio.org/), yo
 following command:
 
 ```bash
-> platformio lib install arduinohaf
+> pio lib install arduinohaf
 ```
 
 Otherwise, download the zip from [https://github.com/cyrusbuilt/ArduinoHAF/archive/master.zip](https://github.com/cyrusbuilt/ArduinoHAF/archive/master.zip)
